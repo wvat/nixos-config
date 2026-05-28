@@ -4,7 +4,10 @@
     inputs = {
     	nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     	nixpkgs_unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    	home-manager.url = "github:nix-community/home-manager";
+    	home-manager = {
+		url = "github:nix-community/home-manager/release-25.11";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
     };
 
     outputs = inputs@{ self, nixpkgs, nixpkgs_unstable, home-manager, ...}:
@@ -24,7 +27,7 @@
 			    home-manager.useGlobalPkgs = true;
 			    home-manager.useUserPackages = true;
 			    home-manager.extraSpecialArgs = { inherit inputs; };
-			    home-manager.users.jdoe = ./home.nix;
+			    home-manager.users.fwv = ./home.nix;
 			}
 		   ];
 		};

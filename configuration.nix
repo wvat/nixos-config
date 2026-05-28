@@ -45,7 +45,7 @@ in
 
   services.xserver.enable = true;
   #services.displayManager.sddm.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
 
   security.polkit.enable = true; 
   services.dbus.enable = true;
@@ -115,8 +115,6 @@ in
     foot
     matugen
     htop
-    git
-    neovim
     fastfetch
     ghostty
     vim

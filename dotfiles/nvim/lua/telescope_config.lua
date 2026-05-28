@@ -1,0 +1,12 @@
+local builtin = require('telescope.builtin')
+require('telescope').load_extension('fzf')
+
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {hidden=True})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = "Grep word under cursor" })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>ld', builtin.lsp_definitions, {})
+vim.keymap.set('n', '<leader>lr', builtin.lsp_references, {})
+vim.keymap.set('n', '<leader>li', builtin.lsp_implementations, {})
+vim.keymap.set('n', '<leader>ls', builtin.lsp_document_symbols, {})

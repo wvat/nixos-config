@@ -60,6 +60,23 @@
       recursive = true;
   };
 
+  programs.ghostty = {
+        enable = true;
+        settings = {
+            theme = "Black Metal";
+            font-family = "JetBrainsMono";
+            font-size = 11;
+        };
+  };
+
+  home.pointerCursor = {
+        package = pkgs.bibata-cursors;
+        name = "Bibata-Modern-Classic";
+        size = 24;
+        gtk.enable = true;
+        x11.enable = true;
+  };
+
   programs.git = {
   	enable = true;
 	userName = "fred";
@@ -79,6 +96,7 @@
     nodejs
     unzip
     gnumake
+    fontpreview
     
     # LSP
     clang-tools          # clangd → C, C++

@@ -116,7 +116,6 @@ in
     matugen
     htop
     fastfetch
-    ghostty
     vim
     wget
     curl
